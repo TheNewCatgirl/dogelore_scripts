@@ -1,0 +1,17 @@
+GENERAL STATEMENT
+    { 
+        "Name":"","Text":"","Type":"Statement", "Next":, "Face":,
+        "Source":""
+    }
+QUESTION (up to 4 answers)
+    {
+        "Name":"","Text":"","Type":"Question","Answers":, "Face":,
+        "Ans1":, "Ans1Text":"","Ans1Check":"", "Ans2":,"Ans2Text":"", "Ans2Check":"","Ans3":,"Ans3Text":"", "Ans3Check":"","Ans4":,"Ans4Text":"", "Ans4Check":""
+        "Source":""
+    }
+ANSWER
+    {
+        "Name":"","Text":"", "Type":"Answer","Next":, "Face":,
+        "Effect":"",
+        "Source":""
+    }

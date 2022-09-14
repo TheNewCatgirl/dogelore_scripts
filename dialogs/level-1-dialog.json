@@ -1,0 +1,29 @@
+[
+    {
+        "Name":"Caesar","Text":"Doge! Jim kidnapped Cheems, you have to save him!","Type":"Statement", "Next":1, "Face":0,
+        "Source":"Talker"
+    },
+    {
+        "Name":"Doge","Text":"Why can't you do it? I'm busy, with... Stuff.","Type":"Statement","Next":2,"Face":2,
+        "Source":"Player"
+    },
+    {
+        "Name":"Caesar","Text":"C'mon, you know I'm not wacky or uncharacteristic\nenough to do it! You have to save him!","Type":"Question","Answers":2, "Face":0,
+        "Ans1":3, "Ans1Text":"Accept","Ans1Check":"None", "Ans2":4,"Ans2Text":"Refuse", "Ans2Check":"None",
+        "Source":"Talker"
+    },
+    {
+        "Name":"Doge","Text":"Fine, I'll save him or something.","Type":"Answer","Next":7,"Face":0,
+        "Effect":"None",
+        "Source":"Player"
+    },
+    {
+        "Name":"Doge","Text":"Don't care, he's on his own.","Type":"Answer","Next":5,"Face":0,
+        "Effect":"None",
+        "Source":"Player"
+    },
+    {
+        "Name":"Caesar","Text":"Fine. I guess someone else will save him.","Type":"Statement","Next":7,"Face":0,
+        "Source":"Talker"
+    }
+]

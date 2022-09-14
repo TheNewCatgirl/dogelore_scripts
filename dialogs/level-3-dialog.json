@@ -1,0 +1,52 @@
+[
+    { 
+        "Name":"Caesar","Text":"We finally made it - the old Cromch factory. ","Type":"Statement", "Next":1, "Face":0,
+        "Source":"Talker"
+    },
+    { 
+        "Name":"Doge","Text":"You're certain they're here?","Type":"Statement", "Next":2, "Face":2,
+        "Source":"Player"
+    },
+    {
+        "Name":"Caesar","Text":".... a bit. Just watch out for the melk vats!","Type":"Question","Answers":3, "Face":0,
+        "Ans1":10, "Ans1Text":"OK","Ans1Check":"None", "Ans2":3,"Ans2Text":"Melk vats?", "Ans2Check":"None","Ans3":5,"Ans3Text":"A bit?", "Ans3Check":"None",
+        "Source":"Talker"
+    },
+    {
+        "Name":"Doge","Text":"What do you mean, \"melk vats\"?", "Type":"Answer","Next":4, "Face":2,
+        "Effect":"None",
+        "Source":"Player"
+    },
+    { 
+        "Name":"Caesar","Text":"Oh yeah, when CROMCH! left this factory, it was kinda rushed. I think some of the melkoges were breaking out, there might even still be one here",
+        "Type":"Statement", "Next":9, "Face":0,
+        "Source":"Talker"
+    },
+    {
+        "Name":"Doge","Text":"What do you mean, \"a bit\"?", "Type":"Answer","Next":6, "Face":2,
+        "Effect":"None",
+        "Source":"Player"
+    },
+    { 
+        "Name":"Caesar","Text":"As in, I'm pretty sure they're here. I don't think they're anywhere else, anyway", "Type":"Statement", "Next":7, "Face":0,
+        "Source":"Talker"
+    },
+    { 
+        "Name":"Doge","Text":"... and what if they're not here?", "Type":"Statement", "Next":8, "Face":1,
+        "Source":"Talker"
+    },
+    { 
+        "Name":"Caesar","Text":"Idk, seems like a you problem", "Type":"Statement", "Next":9, "Face":0,
+        "Source":"Talker"
+    },
+    {
+        "Name":"Caesar","Text":"Is there anything else?","Type":"Question","Answers":3, "Face":0,
+        "Ans1":10, "Ans1Text":"OK","Ans1Check":"None", "Ans2":3,"Ans2Text":"Melk vats", "Ans2Check":"None","Ans3":5,"Ans3Text":"\"A bit\"", "Ans3Check":"None",
+        "Source":"Talker"
+    },
+    {
+        "Name":"Doge","Text":"Alright. Let's finish this.", "Type":"Answer","Next":11, "Face":0,
+        "Effect":"None",
+        "Source":"Player"
+    }
+]

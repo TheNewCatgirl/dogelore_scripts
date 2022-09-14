@@ -1,0 +1,14 @@
+[
+    {
+        "Name":"Caesar","Text":"You made it!","Type":"Statement", "Next":1, "Face":0,
+        "Source":"Talker"
+    },
+    {
+        "Name":"Doge","Text":"Yeah, it was hard but... Hey, wait a second, how did you get here? You're not that wacky!","Type":"Statement","Next":2,"Face":2,
+        "Source":"Player"
+    },
+    {
+        "Name":"Caesar","Text":"Good question. Anyway, Jim riled up some of the melkoge bulls nearby. I think he knows you're coming.","Type":"Statement","Next":7,"Face":0,
+        "Source":"Talker"
+    }
+]

@@ -1,0 +1,19 @@
+[
+    {
+        "Name":"Cheems","Text":"thamk you domge","Type":"Statement", "Next":1, "Face":0,
+        "Source":"Talker"
+    },
+    {
+        "Name":"Doge","Text":"You're welcome, Cheems. Let's go get some Cromch!","Type":"Statement", "Next":2, "Face":0,
+        "Source":"Player"
+    },
+    {
+        "Name":"Cheems","Text":"... domge. Cromch! hams been defumct for yearms.","Type":"Statement", "Next":3, "Face":0,
+        "Source":"Talker"
+    },
+    {
+        "Name":"Doge","Text":"Oh... oh yeah. Where did this chocolate come from..?","Type":"Answer", "Next":5, "Face":2,
+        "Effect":"Endgame",
+        "Source":"Player"
+    }
+]

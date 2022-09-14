@@ -1,0 +1,47 @@
+[
+    { 
+        "Name":"Doge","Text":"Cheems! Thank God you're safe!","Type":"Statement", "Next":1, "Face":0,
+        "Source":"Player"
+    },
+    { 
+        "Name":"Cheems","Text":"yems, i am. thamk you for samvimg me, domge. do youm have amy foomd?","Type":"Statement", "Next":2, "Face":0,
+        "Source":"Talker"
+    },
+    { 
+        "Name":"Doge","Text":"Uh, yeah, I've got like, 9 chocolate bars,","Type":"Statement", "Next":3, "Face":0,
+        "Source":"Player"
+    },
+    { 
+        "Name":"Cheems","Text":"Greamt.\n[Cheems begins eating the Cromch! bars]","Type":"Statement", "Next":4, "Face":0,
+        "Source":"Talker"
+    },
+    { 
+        "Name":"Doge","Text":"Yeah, go ahead and eat up, I guess. Not like I wanted any or anything.","Type":"Statement", "Next":5, "Face":0,
+        "Source":"Player"
+    },
+    { 
+        "Name":"Cheems?","Text":"[Cheems is rapidly eating the bars. He seems to be gaining some form of power from them.]","Type":"Statement", "Next":6, "Face":0,
+        "Source":"Talker"
+    },
+    { 
+        "Name":"Doge","Text":"Ch.. Cheems? Are you ok?","Type":"Statement", "Next":7, "Face":2,
+        "Source":"Player"
+    },
+    { 
+        "Name":"Cheemsburbger","Text":"Thank you.","Type":"Statement", "Next":8, "Face":2,
+        "Source":"Talker"
+    },
+    { 
+        "Name":"Doge","Text":"Y-you're welcome, Cheems; do you need to lie down or something?","Type":"Statement", "Next":9, "Face":2,
+        "Source":"Player"
+    },
+    { 
+        "Name":"Cheemsburbger","Text":"Not you, dog. Thank you, player. You have released me from the bounds of this form.","Type":"Statement", "Next":10, "Face":0,
+        "Source":"Talker"
+    },
+    {
+        "Name":"Thank You","Text":"T h a n k    Y o u .","Type":"Answer", "Next":12, "Face":3,
+        "Effect":"Endgame",
+        "Source":"Talker"
+    }
+]

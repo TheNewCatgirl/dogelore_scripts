@@ -1,0 +1,54 @@
+[
+    { 
+        "Name":"Jim","Text":"Ah, Doge, you've finally arrived. Here to witness the grand event, hm?","Type":"Statement", "Next":1, "Face":0,
+        "Source":"Talker"
+    },
+    { 
+        "Name":"Doge","Text":"You monster! Release Cheems immediately! Your reign of toe-sucking ends here!","Type":"Statement", "Next":2, "Face":2,
+        "Source":"Player"
+    },
+    { 
+        "Name":"Jim","Text":"Sucking toes? You think this is what this is all about, hm? A little perversion, some illicit fun in an abandoned factory? I'm almost disappointed, Doge",
+        "Type":"Statement", "Next":3, "Face":0,
+        "Source":"Talker"
+    },
+    { 
+        "Name":"Doge","Text":"Huh? What do you mean?","Type":"Statement", "Next":4, "Face":1,
+        "Source":"Player"
+    },
+    { 
+        "Name":"Jim","Text":"Your vision is too... small. I don't seek to suck his toes. No, no - I'm going to steal his power. Take his essence. I shall be the next Cheemsburbger.",
+        "Type":"Statement", "Next":5, "Face":0,
+        "Source":"Talker"
+    },
+    {
+        "Name":"Jim","Text":"After that, the sky's the limit! Unlimited power, to kill or suck as many toes as I could ever want! This, this is the future Doge!",
+        "Type":"Question","Answers":2,"Face":0,
+        "Ans1":6, "Ans1Text":"Fight","Ans1Check":"None", "Ans2":8,"Ans2Text":"Cheems", "Ans2Check":"None",
+        "Source":"Talker"
+    },
+    {
+        "Name":"Doge","Text":"Not if I stop you first!", "Type":"Answer","Next":7, "Face":2,
+        "Effect":"None",
+        "Source":"Player"
+    },
+    {
+        "Name":"Jim","Text":"Very well then. Have at you!", "Type":"Answer","Next":12, "Face":0,
+        "Effect":"jim_charge",
+        "Source":"Talker"
+    },
+    {
+        "Name":"Doge","Text":"And what about Cheems?", "Type":"Answer","Next":9, "Face":2,
+        "Effect":"None",
+        "Source":"Player"
+    },
+    { 
+        "Name":"Jim","Text":"Cheems will, of course, have to die. But, a small price to pay for godhood, wouldn't you agree?","Type":"Statement", "Next":10, "Face":0,
+        "Source":"None"
+    },
+    {
+        "Name":"Jim","Text":"But enough talk. Have at you!", "Type":"Answer","Next":11, "Face":0,
+        "Effect":"jim_charge",
+        "Source":"Talker"
+    }
+]

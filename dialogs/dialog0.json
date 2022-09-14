@@ -1,0 +1,29 @@
+[
+    { 
+        "Name":"Caesar","Text":"gah","Type":"Statement", "Next":1, "Face":0,
+        "Source":"Talker"
+    },
+    {
+        "Name":"Doge","Text":"fuckkkkkk","Type":"Statement","Next":2, "Face":1,
+        "Source":"Player"
+    },
+    {
+        "Name":"Caesar","Text":"Hey are we real","Type":"Question","Answers":2, "Face":0,
+        "Ans1":3, "Ans1Text":"Yes","Ans1Check":"None", "Ans2":4,"Ans2Text":"No", "Ans2Check":"None",
+        "Source":"Talker"
+    },
+    {
+        "Name":"Doge","Text":"Yeah, probably", "Type":"Answer","Next":5, "Face":0,
+        "Effect":"None",
+        "Source":"Player"
+    },
+    {
+        "Name":"Doge","Text":"Nah, not at all,","Type":"Answer","Next":5, "Face":1,
+        "Effect":"None",
+        "Source":"Player"
+    },
+    {
+        "Name":"Caesar","Text":"That's deep. See ya","Type":"Statement","Next":6, "Face": 0,
+        "Source":"Talker"
+    }
+]
