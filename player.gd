@@ -41,6 +41,7 @@ var health = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	global.can_move = true
 	if global.next_level == 2:
 		var factory_music = load("res://Art/SFX & Music/music/Factory.mp3")
 		$music.set_stream(factory_music)
@@ -222,12 +223,13 @@ func death():
 	change_emotions(3)
 	global.can_move = false
 	global.score = 0
-	global.cromch_collected -= global.cromch_in_level_collected
-	global.cromch_in_level_collected = 0
+	#global.cromch_collected -= global.cromch_in_level_collected
+	#global.cromch_in_level_collected = 0
 	#global.hundoperc_interacted -= global.hundoperc_interacted_lvl
 	#global.hundoperc_interacted_lvl = 0 
-	global.melkoge_total_tip -= global.melkoge_tip
-	global.melkoge_tip = 0
+	#global.melkoge_total_tip -= global.melkoge_tip
+	#global.melkoge_tip = 0
+	#reset()
 	dead = true
 	
 func _on_sound_effects_finished():
@@ -249,10 +251,12 @@ func collect_cromch():
 	show_cromch()
 
 func reset():
-	global.can_move = true
+	#global.can_move = true
 	global.cromch_collected -= global.cromch_in_level_collected
 	global.cromch_in_level_collected = 0
 	global.score = 0
+	global.melkoge_total_tip -= global.melkoge_tip
+	global.melkoge_tip = 0
 	get_tree().reload_current_scene()
 
 func finalize_level():
@@ -264,10 +268,11 @@ func finalize_level():
 	pass
 
 func _on_button_replay_pressed():
-	global.score = 0
-	global.cromch_collected -= global.cromch_collected
-	global.cromch_in_level_collected = 0
-	global.melkoge_tip = 0
+	#global.score = 0
+	#global.cromch_collected -= global.cromch_collected
+	#global.cromch_in_level_collected = 0
+	#global.melkoge_tip = 0
+	reset()
 	global.can_move = true
 	get_tree().change_scene(global.levels[global.next_level])
 
