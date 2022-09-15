@@ -18,13 +18,15 @@ func _ready():
 
 	
 	#global.hundoperc_interacted = 0
-	global.hundoperc_interactable = 0
+	#global.hundoperc_interactable = 0
 
 	global.can_move = true
 	global.cromch_collected = 0
 	global.total_score = 0
 	global.next_level = 0
 	global.score = 0
+	global.melkoge_tip = 0
+	global.melkoge_total_tip = 0	
 	pass # Replace with function body.
 
 

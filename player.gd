@@ -52,7 +52,9 @@ func _ready():
 		$Camera2D/CanvasLayer/fps_counter.show()
 		$Camera2D/CanvasLayer/button_pressed.show()
 	if global.mute_music:
-		$music.queue_free()
+		$music.set_autoplay(false)
+		$music.stop()
+		$music.set_stream_paused(true)
 	pass # Replace with function body.
 
 var stop_gap = false
@@ -76,7 +78,8 @@ func _physics_process(_delta):
 		if !win_playing:
 			var win_jingle = load("res://Art/SFX & Music/SFX/Level Complete.wav")
 			$music.set_stream(win_jingle)
-			$music.play()
+			if !global.mute_music:
+				$music.play()
 			win_playing = true
 		if timer_score > 0 and !stop_gap:
 			velocity.x += speed
@@ -87,8 +90,9 @@ func _physics_process(_delta):
 			$Camera2D/CanvasLayer/ScoreTime.set_text(score_msg)
 			if timer_score == 1:
 				finalise = true
-				$level_timer.set_wait_time(5)
-				$level_timer.start()
+				if global.mute_music:
+					$level_timer.set_wait_time(1)
+					$level_timer.start()
 			stop_gap = true
 		elif stop_gap:
 			stop_gap = false
@@ -199,7 +203,7 @@ func _on_level_timer_timeout():
 	if !level_end:
 		death()
 		return
-	if finalise and !win_tune:
+	if finalise :
 		finalize_level()
 
 var win_tune = false
@@ -240,7 +244,6 @@ func _on_music_finished():
 		if finalise:
 			$Camera2D/CanvasLayer/button_continue.show()
 			$Camera2D/CanvasLayer/button_replay.show()
-			#print("show continue")
 		win_tune = true
 
 
@@ -260,9 +263,9 @@ func reset():
 	get_tree().reload_current_scene()
 
 func finalize_level():
-	if win_tune:
-		$Camera2D/CanvasLayer/button_continue.show()
-		$Camera2D/CanvasLayer/button_replay.show()
+	print(global.mute_music)
+	$Camera2D/CanvasLayer/button_continue.show()
+	$Camera2D/CanvasLayer/button_replay.show()
 	global.total_score += global.score
 	global.score = 0
 	pass
