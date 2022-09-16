@@ -50,3 +50,7 @@ func end_game():
 		get_tree().change_scene("res://scenes/end_game/end_level_2.tscn")
 		return
 	get_tree().change_scene("res://scenes/end_game/end_level_1.tscn")
+	match end_screen:
+		1: get_tree().change_scene("res://scenes/end_game/end_level_1.tscn") # Default Ending
+		2: get_tree().change_scene("res://scenes/end_game/end_level_2.tscn") # True Bad Ending
+		3: get_tree().change_scene("res://scenes/end_game/end_level_3.tscn") # Don't save Cheems

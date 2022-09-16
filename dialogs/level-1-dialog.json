@@ -23,7 +23,8 @@
         "Source":"Player"
     },
     {
-        "Name":"Caesar","Text":"Fine. I guess someone else will save him.","Type":"Statement","Next":7,"Face":0,
+        "Name":"Caesar","Text":"Fine. I guess someone else will save him.","Type":"Answer","Next":7,"Face":0,
+        "Effect":"Endgame_alt",
         "Source":"Talker"
     }
 ]

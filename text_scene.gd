@@ -137,6 +137,9 @@ func nextPhrase() -> void:
 					parent.charge()
 				"Endgame":
 					global.end_game()
+				"Endgame_alt":
+					global.end_screen = 3
+					global.end_game()
 		queue_free()
 		return
 

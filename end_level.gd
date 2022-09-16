@@ -4,6 +4,8 @@ onready var global = get_node("/root/Global")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if global.end_screen == 3:
+		return
 	global.total_score += global.score
 	global.cromch_in_level_collected = 0
 	var percentage = 0
