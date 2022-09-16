@@ -95,7 +95,18 @@ func _on_interact_pressed():
 		$Popup.popup_centered_clamped()
 		change_input = true
 		input = "interact"
-
+	
+func _on_text_speed_pressed():
+	match global.text_speed:
+		0.1 :
+			global.text_speed = 0.05
+			$text_speed.set_text("Normal")
+		0.05 :
+			global.text_speed = 0.01
+			$text_speed.set_text("Fast")
+		0.0 :
+			global.text_speed = 0.1
+			$text_speed.set_text("Slow")
 func _on_Popup_confirmed():
 	change_input = false
 

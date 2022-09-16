@@ -25,8 +25,10 @@ var temp_lock = true
 var item_num
 
 func _ready():
+	textSpeed = global.text_speed
 	player.level_timer.set_paused(true)
 	global.text_open = true
+	#if textSpeed > 0:
 	$text_speed.wait_time = textSpeed
 	dialog = getDialog()
 	assert(dialog, "Dialog not found")
@@ -41,7 +43,7 @@ func _process(_delta):
 			return
 	
 	#Player can skip text
-	if Input.is_action_just_pressed("interact") and $text.visible_characters != len($text.text):
+	if (Input.is_action_just_pressed("interact") and $text.visible_characters != len($text.text)) or textSpeed == 0:
 		$text.visible_characters = len($text.text)
 
 	elif $text.visible_characters == len($text.text):

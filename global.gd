@@ -28,6 +28,8 @@ var levels = ["res://scenes/level-1.tscn","res://scenes/level-2.tscn","res://sce
 
 var end_screen = 1
 
+var text_speed = 0.05
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
