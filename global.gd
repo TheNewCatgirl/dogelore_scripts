@@ -3,7 +3,7 @@ extends Node
 var can_move = true
 var text_open = false
 
-var cromch_collected = 9
+var cromch_collected = 0
 var cromch_in_level_collected = 0
 #var total_cromch = 0
 var global_cromch = 9

@@ -13,17 +13,17 @@
         "Source":"Talker"
     },
     {
-        "Name":"Doge","Text":"Fine, I'll save him or something.","Type":"Answer","Next":7,"Face":0,
+        "Name":"Doge","Text":"Alright, I'll save him.","Type":"Answer","Next":7,"Face":0,
         "Effect":"None",
         "Source":"Player"
     },
     {
-        "Name":"Doge","Text":"Don't care, he's on his own.","Type":"Answer","Next":5,"Face":0,
+        "Name":"Doge","Text":"Don't care, he's on his own.","Type":"Answer","Next":5,"Face":1,
         "Effect":"None",
         "Source":"Player"
     },
     {
-        "Name":"Caesar","Text":"Fine. I guess someone else will save him.","Type":"Answer","Next":7,"Face":0,
+        "Name":"Caesar","Text":"Fine. I guess someone else will save him.","Type":"Answer","Next":7,"Face":1,
         "Effect":"Endgame_alt",
         "Source":"Talker"
     }

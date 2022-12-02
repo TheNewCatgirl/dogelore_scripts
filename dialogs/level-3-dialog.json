@@ -18,7 +18,7 @@
         "Source":"Player"
     },
     { 
-        "Name":"Caesar","Text":"Oh yeah, when CROMCH! left this factory, it was kinda rushed. I think some of the melkoges were breaking out, there might even still be one here",
+        "Name":"Caesar","Text":"Oh yeah, when CROMCH! left this factory, it was kinda rushed. Some of the melkoges were freaking out, there might even still be one here",
         "Type":"Statement", "Next":9, "Face":0,
         "Source":"Talker"
     },
@@ -36,7 +36,7 @@
         "Source":"Talker"
     },
     { 
-        "Name":"Caesar","Text":"Idk, seems like a you problem", "Type":"Statement", "Next":9, "Face":0,
+        "Name":"Caesar","Text":"Idk, seems like a you problem", "Type":"Statement", "Next":9, "Face":2,
         "Source":"Talker"
     },
     {

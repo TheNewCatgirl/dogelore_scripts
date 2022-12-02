@@ -8,7 +8,17 @@
         "Source":"Player"
     },
     {
-        "Name":"Caesar","Text":"Good question. Anyway, Jim riled up some of the melkoge bulls nearby. I think he knows you're coming.","Type":"Statement","Next":7,"Face":0,
+        "Name":"Caesar","Text":"Good question. Anyway, Jim riled up some of the melkoge bulls nearby. I think he knows you're coming.","Type":"Question","Answers":2, "Face":0,
+        "Ans1":3, "Ans1Text":"Melkoges?","Ans1Check":"None", "Ans2":5,"Ans2Text":"Continue", "Ans2Check":"None",
+        "Source":"Talker"
+    },
+    {
+        "Name":"Doge","Text":"What melkoge bulls?", "Type":"Answer","Next":4, "Face":2,
+        "Effect":"None",
+        "Source":"Player"
+    },
+    { 
+        "Name":"Caesar","Text":"Yeah, some bulls that escaped from the Cromch! factory when their monopoly collapsed. Remember, the hump is the weak spot!","Type":"Statement", "Next":5, "Face":0,
         "Source":"Talker"
     }
 ]
