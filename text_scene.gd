@@ -4,6 +4,8 @@ onready var global = get_node("/root/Global")
 onready var player = get_node("/root/level/player")
 onready var choicebox = $choice_box
 onready var parent = get_tree().get_nodes_in_group("current_talker")[0]
+onready var parent_faces = load(parent.faces)
+onready var player_faces = load("res://Art/DogeLore Assets/faces/doge.png")
 
 export var dialogPath = ""
 export(float) var textSpeed = 0.05
@@ -150,10 +152,15 @@ func nextPhrase() -> void:
 	$Name.bbcode_text = dialog[phraseNum]["Name"]
 	$text.bbcode_text = dialog[phraseNum]["Text"]
 
+	
 	if dialog[phraseNum]["Source"] == "Player":
 		player.change_emotions(dialog[phraseNum]["Face"])
+		$face.set_texture(player_faces)
+		$face.frame = dialog[phraseNum]["Face"]
 	elif dialog[phraseNum]["Source"] == "Talker":
 		parent.change_emotions(dialog[phraseNum]["Face"])
+		$face.set_texture(parent_faces)
+		$face.frame = dialog[phraseNum]["Face"]
 
 	if dialog[phraseNum]["Type"] == "Question":
 		choicebox.show()

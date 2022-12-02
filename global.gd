@@ -3,7 +3,7 @@ extends Node
 var can_move = true
 var text_open = false
 
-var cromch_collected = 0
+var cromch_collected = 9
 var cromch_in_level_collected = 0
 #var total_cromch = 0
 var global_cromch = 9
@@ -30,6 +30,8 @@ var end_screen = 1
 
 var text_speed = 0.05
 
+var end_game = false
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -51,8 +53,9 @@ func end_game():
 	if end_screen == 2:
 		get_tree().change_scene("res://scenes/end_game/end_level_2.tscn")
 		return
-	get_tree().change_scene("res://scenes/end_game/end_level_1.tscn")
+	#get_tree().change_scene("res://scenes/end_game/end_level_1.tscn")
 	match end_screen:
 		1: get_tree().change_scene("res://scenes/end_game/end_level_1.tscn") # Default Ending
 		2: get_tree().change_scene("res://scenes/end_game/end_level_2.tscn") # True Bad Ending
 		3: get_tree().change_scene("res://scenes/end_game/end_level_3.tscn") # Don't save Cheems
+	#end_game = true

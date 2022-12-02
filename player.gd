@@ -29,6 +29,7 @@ var end_begin = false
 var finalise = false
 
 onready var cromch_in_level = get_tree().get_nodes_in_group("cromch").size()
+var paused = false
 
 #Load all SFX
 onready var jump_sfx = load("res://Art/SFX & Music/SFX/Jump 1.wav")
@@ -156,10 +157,21 @@ func get_input():
 		if Input.is_action_just_pressed("interact"):
 			button_pressed = 'j'
 	
+	if Input.is_action_just_pressed("pause"):
+		paused = !paused
+		if paused:
+			global.can_move = false 
+			$Camera2D/CanvasLayer/paused.show()
+			$level_timer.set_paused(true)
+		if !paused:
+			global.can_move = true
+			$Camera2D/CanvasLayer/paused.hide()
+			$level_timer.set_paused(false)
+	
 	velocity.y += GRAVITY
 
 	if !global.can_move:
-		if cause_of_death != "fall" and dead:
+		if cause_of_death != "fall":
 			velocity.y = 0
 		if !level_end:
 			velocity.x = 0
@@ -282,8 +294,11 @@ func _on_button_replay_pressed():
 func _on_button_continue_pressed():
 	global.total_score += global.score
 	global.score = 0
+	#global.cromch_collected += global.cromch_in_level_collected
 	global.cromch_in_level_collected = 0
+	#global.melkoge_total_tip += global.melkoge_tip
 	global.melkoge_tip = 0
 	global.next_level += 1
 	global.can_move = true
+	print("[center]Score: " + str(global.total_score) + "\n" + str(global.cromch_collected) + " Cromch")
 	get_tree().change_scene(global.levels[global.next_level])

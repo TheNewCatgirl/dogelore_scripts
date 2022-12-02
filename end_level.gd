@@ -6,7 +6,7 @@ onready var global = get_node("/root/Global")
 func _ready():
 	if global.end_screen == 3:
 		return
-	global.total_score += global.score
+	#global.total_score += global.score
 	global.cromch_in_level_collected = 0
 	var percentage = 0
 	if global.cromch_collected + global.melkoge_total_tip != 0 and global.hundoperc_interactable != 0:
@@ -28,7 +28,8 @@ func _ready():
 	global.next_level = 0
 	global.score = 0
 	global.melkoge_tip = 0
-	global.melkoge_total_tip = 0	
+	global.melkoge_total_tip = 0
+	global.text_open = false
 	pass # Replace with function body.
 
 

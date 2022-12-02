@@ -95,7 +95,15 @@ func _on_interact_pressed():
 		$Popup.popup_centered_clamped()
 		change_input = true
 		input = "interact"
-	
+
+func _on_Pause_pressed():
+	if !change_input:
+		$Popup.popup()
+		$Popup.set_title("Change Interact to")
+		$Popup.popup_centered_clamped()
+		change_input = true
+		input = "pause"
+
 func _on_text_speed_pressed():
 	match global.text_speed:
 		0.1 :
@@ -104,7 +112,7 @@ func _on_text_speed_pressed():
 		0.05 :
 			global.text_speed = 0.01
 			$text_speed.set_text("Fast")
-		0.0 :
+		0.01 :
 			global.text_speed = 0.1
 			$text_speed.set_text("Slow")
 func _on_Popup_confirmed():
@@ -135,6 +143,10 @@ func _input(event):
 				"interact":
 					InputMap.action_erase_events("interact")
 					InputMap.action_add_event("interact", event)
+					$interact.set_text(event.as_text())
+				"pause":
+					InputMap.action_erase_events("pause")
+					InputMap.action_add_event("pause", event)
 					$interact.set_text(event.as_text())
 			var popup_msg = "                   				 " + event.as_text()
 			$Popup.set_text(popup_msg)

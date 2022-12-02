@@ -16,6 +16,8 @@ var text_created = false;
 
 var section = 0;
 
+var faces = "res://Art/DogeLore Assets/faces/caesar.png"
+
 func _ready():
 	pass
 

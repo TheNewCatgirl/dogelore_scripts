@@ -9,6 +9,8 @@ onready var canvas = get_node('/root/level/CanvasLayer')
 #Export variables shown in GD
 export var dialog = "res://scripts/dialogs/dialog0.json"
 
+var faces = "res://Art/DogeLore Assets/faces/cheems.png"
+
 var in_body = false
 var text_created = false;
 
@@ -22,8 +24,9 @@ func _process(_delta):
 	if global.can_move:
 	#Open talker's dialogue
 		if Input.is_action_just_pressed("interact") and in_body and !global.text_open :
-			print("Total Cromch: " + str(global.cromch_collected))
-			print("Cromch In World: " + str(global.global_cromch))
+#			print("Total Cromch: " + str(global.cromch_collected))
+#			print("Cromch In World: " + str(global.global_cromch))
+			print("Cheems Score: " + str(global.total_score) + "\n" + str(global.cromch_collected) + " Cromch")
 			if global.cromch_collected == global.global_cromch:
 				dialog = "res://scripts/dialogs/final_variant_1.json"
 				global.end_screen = 2
